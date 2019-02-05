@@ -1,7 +1,7 @@
 all: init setversion build
 
 init:
-	rm -rf ./nexus-repository-apt ./nexus-repository-helm
+	rm -rf ./nexus-repository-apt ./nexus-repository-helm ./nexus-repository-composer
 	git clone --single-branch -b UpdateToThreeDotFifteen https://github.com/sonatype-nexus-community/nexus-repository-apt.git
 	git clone https://github.com/sonatype-nexus-community/nexus-repository-helm.git
 	git clone https://github.com/sonatype-nexus-community/nexus-repository-composer.git
