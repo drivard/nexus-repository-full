@@ -1,0 +1,25 @@
+---
+version: "2"
+
+services:
+  nexus:
+    container_name: nexus
+    image: apt-int.enlightns.com/nexus-repository-apt:3.15.2
+    build:
+      context: .
+    volumes:
+      # we are using a host folder but you could use a docker volume
+      # - "/volume1/nexus3/nexus-data:/nexus-data"
+      # To use for local test
+      - "./nexus-data:/nexus-data"
+    networks: 
+      - elk
+    ports:
+      - "8081:8081"
+      - '18443:18443'
+    restart: always
+
+networks:
+  elk:
+    external:
+      name: elk
