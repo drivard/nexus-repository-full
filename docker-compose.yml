@@ -12,6 +12,8 @@ services:
       # - "/volume1/nexus3/nexus-data:/nexus-data"
       # To use for local test
       - "./nexus-data:/nexus-data"
+      # to use the host .m2 folder to cache the maven downloads
+      - "/Users/drivard/.m2:/root/.m2"
     networks: 
       - nexus
     ports:

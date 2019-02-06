@@ -1,4 +1,5 @@
 nexus-repository-apt/
 nexus-repository-helm/
 nexus-repository-composer/
+nexus-repository-r/
 nexus-data/
